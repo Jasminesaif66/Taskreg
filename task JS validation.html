@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+<style>
+.body{
+background-color:#A50101;
+color:#BEB8AE;
+padding:10px;
+}
+
+</style>
+  </head>  
+
+  <body class="body">
+
+<h1> Registration form</h1>
+
+    <form>
+
+<div class="form-group">   <!--username section--> 
+    <label for="exampleInputName">Username</label>
+    <input type="text"class="form-control" id="exampleInputName" aria-describedby="emailHelp" placeholder="Enter username" required>
+     </div>
+
+
+  <div class="form-group">  <!--email section--> 
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
+     </div>
+
+  <div class="form-group">   <!--password section--> 
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
+  </div>
+
+ <div class="form-group">   <!--phone number section--> 
+    <label for="exampleInputphone">Phone number</label>
+    <input type="tel" maxlength="11"class="form-control" id="exampleInputPhone" placeholder="Phone number" required>
+<small >
+*Phone number must be 11 digits max<br>*Phone number must begin with '01' <br>*Phone number's 3rd digit must be either '0' or '1' or '2'
+</small>
+
+
+<p><b id="validation"></b></p>
+  </div>
+  <div class="form-check">
+       </div>
+  <button type="button" class="btn btn-secondary" id="button">Submit</button>
+</form>
+
+
+
+<!--javascript validation section--> 
+ <script type="text/javascript"> 
+
+document.getElementById("button").onclick=function(){
+
+x=document.getElementById("exampleInputPhone").value;
+y=x.split(''); //returns the value of the phone number inpur and splits it in an array//
+if(y[0]!=0 || y[1]!=1 || y[2]!=(0,1,2)){
+var z= document.getElementById("validation").innerHTML="INVALID PHONE NUMBER!";
+  } //checks wheather the 1st and 2nd numbers are 01 or not, the 2nd number is 0 or 1 or 2  or not. 
+
+setTimeout(function(){
+
+location.reload();
+},3000); //refreshs the page after 3000secs
+
+} 
+ 
+</script>
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  </body>
+</html>
