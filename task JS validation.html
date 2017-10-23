@@ -63,7 +63,7 @@ document.getElementById("button").onclick=function(){
 
 x=document.getElementById("exampleInputPhone").value;
 y=x.split(''); //returns the value of the phone number inpur and splits it in an array//
-if(y[0]!=0 || y[1]!=1 || y[2]!=(0,1,2)){
+if(y[0]!=0 || y[1]!=1 || (y[2]!=o && y[2]!=1 && y[2]!=2)){
 var z= document.getElementById("validation").innerHTML="INVALID PHONE NUMBER!";
   } //checks wheather the 1st and 2nd numbers are 01 or not, the 2nd number is 0 or 1 or 2  or not. 
 
